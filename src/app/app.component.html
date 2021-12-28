@@ -23,7 +23,7 @@
         <h1 class="rounded d-flex justify-content-center bg-success text-white">
           Table
         </h1>
-        <app-table [users]="usersInParent"></app-table>
+        <app-table [users]="usersInParent" (user)="getRemoveUser($event)"></app-table>
       </div>
     </div>
   </div>

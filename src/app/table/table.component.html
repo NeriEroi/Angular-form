@@ -9,6 +9,9 @@
         <th>
             City
         </th>
+        <th>
+            Action
+        </th>
     </tr>
     <tr class="text-light" *ngFor="let user of users; let i = index">
         <td *ngIf="user.name && user.city != ''">
@@ -19,6 +22,11 @@
         </td>
         <td *ngIf="user.city != ''">
             {{ user.city }}
+        </td>
+        <td>
+            <button type="button" class="btn btn-danger" (click)="removeUser(i)">
+                Delete
+            </button>
         </td>
     </tr>
 

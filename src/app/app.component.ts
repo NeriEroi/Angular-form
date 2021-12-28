@@ -16,4 +16,8 @@ export class AppComponent {
   getUser($event) {
     this.usersInParent.push({name: $event.name, city: $event.city});
   };
+
+  getRemoveUser($event) {
+    this.usersInParent.splice($event, 1)
+  };
 }
