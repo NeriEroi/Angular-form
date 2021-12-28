@@ -1,0 +1,23 @@
+<div class="bg-success rounded text-white form_title d-flex justify-content-center my-3">
+    <h1>
+        This is your form
+    </h1>
+</div>
+
+<div class="name_cont">
+
+    <label for="name">Name</label>
+    <input type="text" class="form-control" #name>
+
+</div>
+
+<div class="city_cont mt-3">
+
+    <label for="city">City</label>
+    <input type="text" class="form-control" #city>
+
+    <button class="btn btn-success mt-5" (click)="addUser(name.value, city.value)">Submit</button>
+
+</div>
+
+

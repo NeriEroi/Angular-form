@@ -1,0 +1,25 @@
+<table class="table bg-info ">
+    <tr class="text-light">
+        <th>
+            User's number
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            City
+        </th>
+    </tr>
+    <tr class="text-light" *ngFor="let user of users; let i = index">
+        <td *ngIf="user.name && user.city != ''">
+            {{ i + 1 }}
+        </td>
+        <td *ngIf="user.name != ''">
+            {{ user.name }}
+        </td>
+        <td *ngIf="user.city != ''">
+            {{ user.city }}
+        </td>
+    </tr>
+
+</table>
