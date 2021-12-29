@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { UsersInParents } from '../usersInParents.model';
 
 @Component({
   selector: 'app-table',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class TableComponent implements OnInit {
 
-  @Input() users: any[] = [{name: "string", city: "string"}];
+  @Input() users: UsersInParents[] = [];
   @Output() user = new EventEmitter<number>();
 
   constructor() {

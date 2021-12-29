@@ -1,5 +1,6 @@
 
 import { Component } from '@angular/core';
+import { UsersInParents } from './usersInParents.model';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  usersInParent = [
-    {name: 'Sergeij', city: 'Moscow'},
-    {name: 'Andy', city: 'New York'},
-    {name: 'Louis-Ferdinand', city: 'Paris'},
+  usersInParent: UsersInParents[] = [
+    new UsersInParents('Sergeij', 'Moscow'),
+    new UsersInParents('Andy','New York'),
+    new UsersInParents('Louis-Ferdinand','Paris')
   ];
 
   getUser($event) {
