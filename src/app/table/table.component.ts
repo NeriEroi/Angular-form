@@ -9,7 +9,7 @@ import { UsersInParents } from '../usersInParents.model';
 export class TableComponent implements OnInit {
 
   @Input() users: UsersInParents[] = [];
-  @Output() user = new EventEmitter<number>();
+  @Output() user = new EventEmitter<any>();
 
   constructor() {
     
@@ -18,7 +18,7 @@ export class TableComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  removeUser(user) {
+  removeUser(user: any) {
     this.user.emit(user);
   }
 }
